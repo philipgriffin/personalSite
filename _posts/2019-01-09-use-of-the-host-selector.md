@@ -24,7 +24,7 @@ Imagine you have a custom component such as;
 
 In your css you may want to style the album element from within it's inline stylesheet. 
 
-This is where the \`\`\`:host\`\`\` selector comes in handy. Consider the below usage to add 10 pixels of margin to the album element.
+This is where the \`:host\` selector comes in handy. Consider the below usage to add 10 pixels of margin to the album element.
 
 \`\`\`
 
