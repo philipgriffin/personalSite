@@ -8,8 +8,6 @@ excerpt_separator: "<!-- more -->"
 date: 2019-01-09 13:13:52 +0000
 
 ---
-# Use of the host: selector
-
 The \`:host\`selector can be used to target custom components from within a css environment. Let's have a look!
 
 <!-- more -->
