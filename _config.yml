@@ -4,8 +4,8 @@ highlighter: rouge
 
 # Setup
 title: Philip Griffin
-tagline: "Stuff // Things"
-description: "Personal Webpage"
+tagline: "Blog Page"
+description: "Stuff // Things"
 url: https://philip-griffin.com
 baseurl:
   ""
