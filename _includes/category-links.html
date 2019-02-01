@@ -8,4 +8,9 @@ for node in pages_list %} {% if node.title != null %} {% if node.layout ==
   >{{ node.title }}</a
 >
 {% endif %} {% endif %} {% endfor %}
-<a class="category-link" href="https://philip-griffin.com/resume/">Resume</a>
+<a class="category-link" href="{{site.baseUrl}}/resume/">Resume<span
+  style="    
+  display: inline;
+  font-size: 0.6em;
+  margin-left: 10px;">{% include svg/lock.svg %}</span> 
+</a>

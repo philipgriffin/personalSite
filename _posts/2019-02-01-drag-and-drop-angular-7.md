@@ -15,12 +15,12 @@ Dragging and dropping has never been easier! Lets make use of the Component Deve
 Make sure you are on at least V7 of Angular. You can check this by running ```ng version``` from your chosen CLI (if you have the Angular CLI installed globally).
 
 Start by creating a new project.
-```console
+```
   ng new dragAndDropDemo
 ```
 
 Right away we can install the CDK and then serve the app.
-```console
+```
   npm i @angular/cdk -S
   ng serve
 ```
@@ -43,9 +43,8 @@ Now just navigate to your ```app.module.ts``` and add the ```DragDropModule``` i
 ```
 
 Navigate to your ```app.component.html``` and drop in the below HTML.
-
 ```html
-  <div [style.font-size]="'100px'" cdkDrag>
+  <div style="font-size: 100px;" cdkDrag>
     🍔
   </div>
 ```
@@ -54,4 +53,4 @@ With the ```cdkDrag``` directive we can now easily drag this div around!
 
 See the result below.
 
-![Drag and drop gif]({{ site.baseurl }}/assets/images/dragDrop.gif "Drag and drop gif")
+<img style="border: 1px solid lightgray;" src="{{ site.baseurl }}/assets/images/dragDrop.gif" alt="Drag and drop gif">
