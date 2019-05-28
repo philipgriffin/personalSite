@@ -14,4 +14,23 @@ With that same terminal window we can install the dependencies that we're going 
     npm i -S express puppeteer
     npm i -D nodemon
 
-The -S
+The ```-S``` tells npm to save express (used for creating our endpoint) and puppeteer (used to scrape our webpage) in our package.json under dependencies.
+
+The ```-D``` tells npm to save nodemon (used for hot-reloading our node.js code) in our package.json under devDependencies.
+
+Now lets create a file called index.js in the root of our project.
+Inside we can add a basic server using the code below.
+
+const express = require("express");
+const app = express();
+
+app.listen(3000);
+
+app.get("/hello-world", function(req, res) {
+  res.status(200).json({ text: "hello world" });
+});
+
+
+  "scripts": {
+    "start": "nodemon index.js"
+  },
