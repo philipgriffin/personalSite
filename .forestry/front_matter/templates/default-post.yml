@@ -1,6 +1,10 @@
 ---
 label: Default post
 hide_body: false
-fields: []
+fields:
+- name: nodejs
+  type: tag_list
+  default: []
+  label: Node.js
 pages:
 - _posts/Creating your own API with web scraping - Node.js & Puppeteer  in 5 minutes!.md
