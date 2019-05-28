@@ -83,7 +83,9 @@ Here we simply create an asynchronous immediately invoked function expression. T
 
     const browser = await puppeteer.launch({ headless: true });
 
-Using await we can tell puppeteer to launch in a headless mode so that we don't physically watch the scraping occurring. Feel free to change this to false if you want to watch! The launch function returns a promise although rather than allowing asynchronous execution we will wait until the promise has completed by specifying the await keyword as we need to use the browser.
+Using await we can tell puppeteer to launch in a headless mode so that we don't physically watch the scraping occurring. Feel free to change this to false if you want to watch! 
+
+The launch function returns a promise although rather than allowing asynchronous execution we will wait until the promise has completed by specifying the await keyword as we need to use the browser.
 
 From here on we tell puppeteer to connect to our desired website and begin scraping. Once we get what we need we can return it like before and we now have our own API to scrape a website! 
 
