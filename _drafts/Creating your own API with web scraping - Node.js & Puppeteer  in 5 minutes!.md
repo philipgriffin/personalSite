@@ -6,7 +6,7 @@ Presuming you have Node.js installed lets jump right in and create the endpoint!
 Fire up a terminal and type the code below to get a default package.json - no questions asked!
 
 ```javascript
-    npm init -y
+npm init -y
 ```
 
 With that same terminal window we can install the dependencies that we're going to use.
