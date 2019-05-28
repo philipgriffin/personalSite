@@ -1,9 +1,7 @@
 ---
 
 ---
-## Creating the endpoint
-
-Presuming you have Node.js installed lets jump right in! _(If you don't head over to_ [_https://nodejs.org/en/_](https://nodejs.org/en/ "https://nodejs.org/en/")_)_
+Presuming you have Node.js installed lets jump right in and create the endpoint! _(If you don't head over to_ [_https://nodejs.org/en/_](https://nodejs.org/en/ "https://nodejs.org/en/")_)_
 
 Fire up a terminal and type the code below to get a default package.json - no questions asked!
 
