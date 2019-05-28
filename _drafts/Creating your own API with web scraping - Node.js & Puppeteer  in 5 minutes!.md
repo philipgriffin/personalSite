@@ -90,3 +90,5 @@ Using await we can tell puppeteer to launch in a headless mode so that we don't 
 From here on we tell puppeteer to connect to our desired website and begin scraping. Once we get what we need we can return it like before and we now have our own API to scrape a website! 
 
 Check it out below along with the source code.
+
+![](/uploads/scraping.gif)
