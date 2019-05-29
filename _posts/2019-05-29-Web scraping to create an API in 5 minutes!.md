@@ -55,7 +55,7 @@ Now lets get scraping...
 Lets start by renaming our endpoint to what we want to achieve. I'm going to scrape the title from the most recent post on my own website so I'll name my endpoint philipgriffin/title like so.
 
 ```javascript
-    app.get("/philipgriffin/title", function(req, res) {
+ app.get("/philipgriffin/title", function(req, res) {
 ```
 
 Lets modify the code within the get callback and replace it with the code below
