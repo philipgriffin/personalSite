@@ -1,4 +1,5 @@
 ---
+nodejs: []
 
 ---
 Presuming you have Node.js installed lets jump right in and create the endpoint! _(If you don't head over to_ [_https://nodejs.org/en/_](https://nodejs.org/en/ "https://nodejs.org/en/")_)_
@@ -12,8 +13,8 @@ npm init -y
 With that same terminal window we can install the dependencies that we're going to use.
 
 ```javascript
-    npm i -S express puppeteer
-    npm i -D nodemon
+npm i -S express puppeteer
+npm i -D nodemon
 ```
 
 The `-S` tells npm to save `express` (used for creating our endpoint) and `puppeteer` (used to scrape our webpage) in our `package.json` under dependencies.
@@ -24,22 +25,22 @@ Now lets create a file called index.js in the root of our project.
 Inside we can add a basic server using the code below.
 
 ```javascript
-    const express = require("express");
-    const app = express();
-    
-    app.listen(3000);
-    
-    app.get("/hello-world", function(req, res) {
-     res.status(200).json({ text: "hello world" });
-    });
+const express = require("express");
+const app = express();
+
+app.listen(3000);
+
+app.get("/hello-world", function(req, res) {
+ res.status(200).json({ text: "hello world" });
+});
 ```
 
 Lets jump into the package.json and modify the scripts object to look like below
 
 ```javascript
-    "scripts": {
-     "start": "nodemon index.js"
-    },
+"scripts": {
+ "start": "nodemon index.js"
+},
 ```
 
 Now run npm start and head over to chrome and navigate to localhost:3000. You should be greeted with a JSON response that looks like the response below.
@@ -59,30 +60,30 @@ Lets start by renaming our endpoint to what we want to achieve. I'm going to scr
 Lets modify the code within the get callback and replace it with the code below
 
 ```javascript
-    app.get("/philipgriffin/title", function(req, res) {
-      
-      void (async() => {
-        
-        const browser = await puppeteer.launch({ headless: true });
-        
-        try {
-        
-          const page = await browser.newPage();
-          await page.goto("https://philip-griffin.com");
-          
-          const postTitleElement = await page.$(".post-title");
-          const postTitle = await page.evaluate(postTitleElement => postTitleElement.textContent.trim(), postTitleElement);
-          
-          await browser.close();
-          res.status(200).json({ postTitle: postTitle });
-          
-        } catch (e) {
-        
-          await browser.close();
-          res.status(500).json({ error: "error" });
-        }
-      })();
-    });
+app.get("/philipgriffin/title", function(req, res) {
+
+ void (async() => {
+
+  const browser = await puppeteer.launch({ headless: true });
+
+  try {
+
+  const page = await browser.newPage();
+  await page.goto("https://philip-griffin.com");
+
+  const postTitleElement = await page.$(".post-title");
+  const postTitle = await page.evaluate(postTitleElement => postTitleElement.textContent.trim(), postTitleElement);
+
+  await browser.close();
+  res.status(200).json({ postTitle: postTitle });
+
+  } catch (e) {
+
+  await browser.close();
+   res.status(500).json({ error: "error" });
+  }
+ })();
+});
 ```
 
 Okay! Lets explain this...
