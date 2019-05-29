@@ -1,7 +1,7 @@
 ---
 tags: 
- -Node.js 
- -Puppeteer
+- Node.js 
+- Puppeteer
 
 ---
 Presuming you have Node.js installed lets jump right in and create the endpoint! _(If you don't head over to_ [_https://nodejs.org/en/_](https://nodejs.org/en/ "https://nodejs.org/en/")_)_
