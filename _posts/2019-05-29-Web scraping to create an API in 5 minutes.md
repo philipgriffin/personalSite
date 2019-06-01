@@ -48,7 +48,7 @@ Lets jump into the package.json and modify the scripts object to look like below
 
 Now run npm start and head over to chrome and navigate to localhost:3000. You should be greeted with a JSON response that looks like the response below.
 
-![](/uploads/json-hello-world.png)
+<img style="border: 1px solid lightgray;" src="{{ site.baseurl }}/uploads/json-hello-world.png" alt="Example response on localhost">
 
 Now lets get scraping...
 
@@ -92,13 +92,13 @@ app.get("/philipgriffin/title", function(req, res) {
 Okay! Lets explain this...
 
 ```javascript
-    void (async() => { //body })();
+void (async() => { /*body*/ })();
 ```
 
 Here we simply create an asynchronous immediately invoked function expression. This is required so that we can use the await keyword to wait for promises to complete. async and await were introduced in ES 2017 and allows us to deal with promises in a cleaner fashion - something we'll see in a few moments.
 
 ```javascript
-    const browser = await puppeteer.launch({ headless: true });
+const browser = await puppeteer.launch({ headless: true });
 ```
 
 Using await we can tell puppeteer to launch in a headless mode so that we don't physically watch the scraping occurring. Feel free to change this to false if you want to watch!
@@ -111,6 +111,12 @@ Check it out below along with the source code.
 
 Source code: [https://github.com/philipgriffin/scrapingApi](https://github.com/philipgriffin/scrapingApi "https://github.com/philipgriffin/scrapingApi")
 
+
 Demo;
 
-![](/uploads/scraping.gif)
+<img style="border: 1px solid lightgray;" src="{{ site.baseurl }}/uploads/scraping.gif" alt="Hitting our endpoint in the browser">
+
+<!-- 
+ <iframe src = "https://philipgriffin.bitbucket.io/build/" width = "555" height = "200">
+         Sorry your browser does not support inline frames.
+      </iframe> -->
