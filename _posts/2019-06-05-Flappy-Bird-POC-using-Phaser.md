@@ -12,5 +12,5 @@ With no prior game development experience I created a small POC of Flappy Bird i
 
 <!-- more -->
 
-<iframe src = "https://philipgriffin.bitbucket.io/build/" width = "auto" height = "530">
+<iframe src = "https://philipgriffin.bitbucket.io/games/flappy-bird/" width = "auto" height = "530">
  Sorry your browser does not support loading Flappy Bird.      </iframe>
